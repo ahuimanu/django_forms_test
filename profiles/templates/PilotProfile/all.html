@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pilot in pilots  %}
+        <tr>
+            <td>
+                {{ pilot.Name }}
+            </td>
+        </tr>        
+        {% endfor %}    
+
+    </tbody>
+
+</table>
+
+
+{% lorem 3 b random %}
+
