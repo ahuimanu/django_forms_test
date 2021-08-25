@@ -1,15 +1,8 @@
 {
-  "version": "1.0",
-  "defaultProvider": "cdnjs",
-  "libraries": [
-    {
-      "library": "twitter-bootstrap@5.1.0",
-      "destination": "static/bs5"
-    },
-    {
-      
-      "library": "jquery@3.5.1",
-      "destination": "static/jquery"
-    }
-  ]
+    "version": "1.0",
+    "defaultProvider": "cdnjs",
+    "libraries": [
+        {"library": "twitter-bootstrap@5.1.0", "destination": "static/bs5"},
+        {"library": "jquery@3.5.1", "destination": "static/jquery"}
+    ]
 }
