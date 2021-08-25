@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .forms import BookFormSet
+from .forms import BookForm, BookFormSet
 from .models import Author, Book
 
 # Create your views here.
@@ -14,10 +14,12 @@ def create_book(request, pk):
             formset.save()
             return redirect("create-book", pk=author.id)
 
-    context = {
-        "formset": formset,
-        "author": author,
-        "books": books
-    }
+    context = {"formset": formset, "author": author, "books": books}
 
     return render(request, "create_book.html", context)
+
+
+def create_book_form(request):
+    form = BookForm()
+    context = {"form": form}
+    return render(request, "partials/book_form.html", context)
